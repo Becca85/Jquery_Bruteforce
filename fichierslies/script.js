@@ -1,14 +1,16 @@
 jQuery(document).ready(function(){  
-	
-$("#chercher").click(function(){
 
+
+
+$("#chercher").click(function(){
+var tabDeMot = [];
 var brutDeForce = $.ajax({
 	url : 'http://docusland.fr/code-academie/js_bruteforce/',
 	type : 'POST',
 	dataType : 'html',
 }); // appel ajax du site a craquer
-var tabDeMot= $.ajax({
-	url:'http://docusland.fr/code-academie/js_bruteforce/dico.txt',
+	tabDeMot = $.ajax({
+	url:'http://docusland.fr/code-academie/js_bruteforce/data/dico.txt',
 	type : 'GET',
 	dataType : 'text'
 });// appel ajax du dico
